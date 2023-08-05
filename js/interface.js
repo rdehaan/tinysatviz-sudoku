@@ -24,9 +24,7 @@ function load_example_sudoku() {
   }
 }
 
-function interface_wait_time_propagate() {
-  return 0;
-}
+interface_wait_time_propagate = null;
 
 function interface_wait_time_propagate_round() {
   speed_factor = document.getElementById("speed").value;

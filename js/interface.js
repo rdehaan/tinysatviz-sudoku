@@ -94,7 +94,7 @@ function interface_assign(lit) {
       board[c].candidates.splice(index, 1);
     }
   }
-  sudoku_render_board();
+  // sudoku_render_board();
 }
 
 function interface_unassign(lit) {
@@ -113,7 +113,7 @@ function interface_unassign(lit) {
     var c = get_cell_no_from_coord(i, j);
     board[c].candidates.push(v);
   }
-  sudoku_render_board();
+  // sudoku_render_board();
 }
 
 function interface_propagate(lit) {
@@ -123,6 +123,10 @@ function interface_propagate(lit) {
     type: "prop",
   });
   interface_assign(lit);
+}
+
+function interface_done_propagating() {
+  sudoku_render_board();
 }
 
 function interface_conflict(clause) {

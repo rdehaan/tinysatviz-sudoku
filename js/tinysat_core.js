@@ -558,6 +558,7 @@ var initSolver = function () {
       // logger("- - - - - - - - - - -");
 
       var conflict = use_2wl ? await propagate_2wl() : await propagate();
+      interface_done_propagating();
       if (!should_abort) {
         await sleep(interface_wait_time_propagate_round());
         await wait_until_allowed_to_continue();
